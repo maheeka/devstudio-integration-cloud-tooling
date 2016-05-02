@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
-   
+   <extension point="org.eclipse.core.resources.natures"
+		id="org.wso2.developerstudio.eclipse.integration.project.nature" name="Integration Project Nature">
+		<runtime>
+			<run
+				class="org.wso2.developerstudio.eclipse.integration.project.nature.IntegrationProjectNature">
+			</run>
+		</runtime>
+	</extension>
    <extension
          point="org.eclipse.ui.newWizards">
          <wizard name="Integration Project"
