@@ -11,7 +11,7 @@
 				  title="Integration Template Artifact"
 				  description="Create a new Integration Template Artifact"
 				  error="Create a integration template">
-			<data modelProperty="integrationtemplate.name" type="string" 
+			<data modelProperty="temp.name" type="string" 
 			fieldController="org.wso2.developerstudio.eclipse.artifact.template.validators.TemplateProjectFieldController">Integration Template Name</data>	
 		
 			<data modelProperty="save.file" type="workspacefolder" fieldController="org.wso2.developerstudio.eclipse.artifact.template.validators.TemplateProjectFieldController" 
