@@ -49,7 +49,7 @@ public class IntegrationTemplateProjectCreationWizard extends TemplateProjectCre
 	public boolean performFinish() {
 		try {
 			project = integrationTemplateModel.getTemplateSaveLocation().getProject();
-			super.setProject(project);
+			setProject(project);
 			createIntegrationTemplateArtifact(integrationTemplateModel);
 			if (fileLst.size() > 0) {
 				openEditor(fileLst.get(0));
