@@ -9,6 +9,11 @@
 			</run>
 		</runtime>
 	</extension>
+	<extension point="org.eclipse.ui.ide.projectNatureImages">
+		<image id="org.wso2.developerstudio.eclipse.integration.project.natureImage"
+			natureId="org.wso2.developerstudio.eclipse.integration.project.nature" icon="icons/esb-project-12.png">
+		</image>
+	</extension>
    <extension
          point="org.eclipse.ui.newWizards">
          <wizard name="Integration Project"
@@ -16,10 +21,28 @@
 			class="org.wso2.developerstudio.eclipse.integration.project.ui.wizard.IntegrationProjectWizard"
 			id="org.wso2.developerstudio.eclipse.artifact.newintegrationproject"
 			wizardManifest="project_wizard.xml"
-			icon="icons/integration-project-wizard.png"
+			icon="icons/esb-project-wizard.png"
 			project="true">
 			<description>Integration Project</description>
 		</wizard>
    </extension>
+   <extension point="org.eclipse.ui.popupMenus">
+	        <objectContribution objectClass="org.eclipse.core.resources.IProject" id="org.wso2.developerstudio.eclipse.esb.project.popup.importCloudConnector">
+	               <action
+	                        label="Add or Remove Connector"
+	                        icon="icons/car.png"
+	                   class="org.wso2.developerstudio.eclipse.esb.project.ui.action.ImportCloudConnectorAction"
+	                        id="org.wso2.developerstudio.eclipse.esb.project.ui.action.cloudConnectorImport">
+	               </action>
+	               <enablement>
+						<adapt type="org.eclipse.core.resources.IProject">
+						 <or>
+							<test property="org.eclipse.core.resources.projectNature"
+								value="org.wso2.developerstudio.eclipse.integration.project.nature" />
+		 				</or>
+						</adapt>
+				</enablement>
+	          </objectContribution>     
+	 </extension>
 
 </plugin>

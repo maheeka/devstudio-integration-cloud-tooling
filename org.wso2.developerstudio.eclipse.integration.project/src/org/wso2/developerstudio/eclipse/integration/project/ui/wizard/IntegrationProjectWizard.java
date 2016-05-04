@@ -38,7 +38,7 @@ import org.wso2.developerstudio.eclipse.utils.project.ProjectUtils;
 
 public class IntegrationProjectWizard extends AbstractWSO2ProjectCreationWizard {
 	private static IDeveloperStudioLog log=Logger.getLog(Activator.PLUGIN_ID);
-	private static final String INTEGRATION_PROJECT_NATURE = "org.wso2.developerstudio.eclipse.integration.project.nature";//TODO integration prokect nature
+	private static final String INTEGRATION_PROJECT_NATURE = "org.wso2.developerstudio.eclipse.integration.project.nature";
 	private IProject project;
 	private IntegrationProjectModel integrationProjectModel;
 	private File pomfile;
